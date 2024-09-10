@@ -79,16 +79,6 @@
           <oj-bind-text value="[[message]]"></oj-bind-text>
         </p>
       </div>
-
-      <!--
-         ** Oracle JET V13.0.0 web application navigation drawer pattern.
-         ** Please see the demos under Cookbook/Patterns/App Shell: Web
-         ** and the CSS documentation under Support/API Docs/Non-Component Styling
-         ** on the JET website for more information on how to use this pattern.
-         ** The off-canvas section is used when the browser is resized to a smaller media
-         ** query size for a phone format and hidden until a user clicks on
-         ** the header hamburger icon.
-      -->
       <oj-drawer-popup
         id="navDrawer"
         edge="start"
@@ -108,17 +98,10 @@
         </oj-navigation-list>
       </oj-drawer-popup>
       <div id="pageContent" class="oj-web-applayout-page">
-        <!--
-           ** Oracle JET V13.0.0 web application header pattern.
-           ** Please see the demos under Cookbook/Patterns/App Shell: Web
-           ** and the CSS documentation under Support/API Docs/Non-Component Styling
-           ** on the JET website for more information on how to use this pattern.
-        -->
+
         <header role="banner" class="oj-web-applayout-header">
           <div
-            class="oj-web-applayout-max-width oj-flex-bar oj-sm-align-items-center"
-          >
-            <!-- Drawer toggle button -->
+            class="oj-web-applayout-max-width oj-flex-bar oj-sm-align-items-center" >
             <div class="oj-flex-bar-start oj-md-hide">
               <oj-button
                 id="drawerToggleButton"
