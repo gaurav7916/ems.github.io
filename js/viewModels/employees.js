@@ -1,39 +1,15 @@
-/**
- * @license
- * Copyright (c) 2014, 2022, Oracle and/or its affiliates.
- * Licensed under The Universal Permissive License (UPL), Version 1.0
- * as shown at https://oss.oracle.com/licenses/upl/
- * @ignore
- */
-/*
- * Your employees ViewModel code goes here
- */
 define(['../accUtils'],function(accUtils) {
     function IncidentsViewModel() {
-      // Below are a set of the ViewModel methods invoked by the oj-module component.
-      // Please reference the oj-module jsDoc for additional information.
-
-      /**
-       * Optional ViewModel method invoked after the View is inserted into the
-       * document DOM.  The application can put logic that requires the DOM being
-       * attached here.
-       * This method might be called multiple times - after the View is created
-       * and inserted into the DOM and after the View is reconnected
-       * after being disconnected.
-       */
       var arr= [];
       function displaytable(){
-          str = "<table class='table table-striped' border='2'><tr><th>Emp Id </th><th>Emp Name </th><th>Designation </th><th>Salary(in $) </th></tr>";
+          str = "<table class='table table-striped' border='2'><tr><th>Emp Id </th><th>Emp Name </th><th>Designation </th><th>Salary</th></tr>";
           for(var ob of arr){
               str+=`<tr><td>${ob.id}</td><td>${ob.name}</td><td>${ob.desg}</td><td>${ob.sal}</td></tr>`
           }
           str += "</table>"
-          //alert(str);
           document.getElementById("mydiv").innerHTML = str;
       }
 
-
-      //add new object in array
       function addnewEmp(){
           var id=parseInt(document.getElementById("id").value);
           var name=document.getElementById("ename").value;
@@ -93,28 +69,14 @@ define(['../accUtils'],function(accUtils) {
         document.title = "Employee";
         // Implement further logic if needed
       };
-
-      /**
-       * Optional ViewModel method invoked after the View is disconnected from the DOM.
-       */
       this.disconnected = () => {
         // Implement if needed
       };
 
-      /**
-       * Optional ViewModel method invoked after transition to the new View is complete.
-       * That includes any possible animation between the old and the new View.
-       */
       this.transitionCompleted = () => {
         // Implement if needed
       };
     }
-
-    /*
-     * Returns an instance of the ViewModel providing one instance of the ViewModel. If needed,
-     * return a constructor for the ViewModel so that the ViewModel is constructed
-     * each time the view is displayed.
-     */
     return IncidentsViewModel;
   }
 );
