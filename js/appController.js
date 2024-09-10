@@ -60,7 +60,12 @@ define(['knockout', 'ojs/ojcontext', 'ojs/ojmodule-element-utils', 'ojs/ojknocko
       this.appName = ko.observable("App Name");
       // User Info used in Global Navigation area
       this.userLogin = ko.observable("Gaurav Gupta");
-
+      // Footer
+      this.footerLinks = [
+        {name: 'Tech Stack Used : OJET (Oracle JavaScript Extension Toolkit)', linkId: 'OJET', linkTarget:'https://www.oracle.com/webfolder/technetwork/jet/index.html'},
+        { name: "Javascript", id: "Javascript", linkTarget: "https://www.javascript.com" },
+        { name: "Bootstrap, HTML5, CSS3", id: "bootstrap", linkTarget: "https://getbootstrap.com/docs/5.3/getting-started/introduction/" },
+      ];
     }
      // release the application bootstrap busy state
     Context.getPageContext().getBusyContext().applicationBootstrapComplete();
