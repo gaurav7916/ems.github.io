@@ -13,6 +13,10 @@ define(['../accUtils'],function(accUtils) {
       function addnewEmp(){
           var id=parseInt(document.getElementById("id").value);
           var name=document.getElementById("ename").value;
+          if (!id || !name) {
+              alert("Please enter Employee ID and Name");
+              return; 
+          }
           var desg=document.getElementById("desg").value;
           var sal=parseInt(document.getElementById("sal").value) ;
           // ob = {id:id, name:name, desg:desg, sal:sal};   older version
