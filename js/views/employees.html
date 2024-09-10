@@ -5,7 +5,7 @@
 <script>
       var arr= [];
       function displaytable(){
-          str = "<table class='table table-striped' border='2'><tr><th>Emp Id </th><th>Emp Name </th><th>Designation </th><th>Salary(in $) </th></tr>";
+          str = "<table class='table table-striped' border='2'><tr><th>Emp Id </th><th>Emp Name </th><th>Designation </th><th>Salary</th></tr>";
           for(var ob of arr){
                str+=`<tr><td>${ob.id}</td><td>${ob.name}</td><td>${ob.desg}</td><td>${ob.sal}</td></tr>`
           }
@@ -78,12 +78,12 @@
   <body onload="displaytable()">
     <form>
 
-      <h4>Employee Management System</h4><br>
+  <h3>Employee Management System</h3><br>
 <div class="container">
-  <label for="id">Id :</label><input type="text" name="id" id="id" />
-  <label for="ename">Name :</label><input type="text" name="ename" id="ename" />
-  <label for="desg">Designation :</label><input type="text" name="desg" id="desg" />
-  <label for="sal">Salary :</label><input type="text" name="sal" id="sal" />
+  <label for="id">Employee Id :</label><input type="number" class="oj-sm-6" name="id" id="id" placeholder="Enter Employee ID" required/>
+  <label for="ename">Name :</label><input type="text" class="oj-sm-6" name="ename" id="ename" placeholder="Enter Employee Name" required/>
+  <label for="desg">Designation :</label><input type="text" class="oj-sm-6" name="desg" id="desg" placeholder="Enter Designation"/>
+  <label for="sal">Salary :</label><input type="text" class="oj-sm-6" name="sal" placeholder="Enter Salary" id="sal" />
 </div>
       <br>
       <button style="margin-right:1rem"
